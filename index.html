@@ -8,15 +8,75 @@
     <link href="/css/all.css" rel="stylesheet">
     <link href="css/solid.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+    </style>
   </head>
-
 
   <body>
 
 
+<!--------------------------------------------------------->
+<!--Header-->
+<!--------------------------------------------------------->
+
+    <header class="container-header">
+      <img src="images/logo/Reservia.svg" alt="Logo Reservia" class="header-logo" title="Accueil">
+      <nav class="container-register">
+          <a href="#">S'inscrire</a>
+      </nav>
+    </header>
 
 
+<!--------------------------------------------------------->
+<!--Nav-->
+<!--------------------------------------------------------->
 
+    <nav class="container-accommodation-activity">
+      <a href="#accomodation-research" class="button-accomodation">Hébergements</a>
+      <a href="#activity-research" class="button-activity">Activités</a>
+    </nav>
+
+
+<!--------------------------------------------------------->
+<!--Slogan-->
+<!--------------------------------------------------------->
+
+    <div class="catchword">
+      <H1>Trouvez votre hébergement pour des vacances de rêves</H1>
+      <p>En plein centre ville ou en pleine nature</p>
+    </div>
+
+
+<!--------------------------------------------------------->
+<!--Champs de texte-->
+<!--------------------------------------------------------->
+
+    <div class="container-search">
+      <button class="localization-button"><i class="fas fa-map-marker-alt"></i></button>
+      <input type="text" class="input-search" placeholder="Où allez-vous ?" />
+      <button class="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    
+
+<!--------------------------------------------------------->
+<!--Filtres-->
+<!--------------------------------------------------------->
+    
+    <div class="container-filter">
+      <h2>Filtres</h2>
+      <div class="card-filter">
+        <button class="button-filter">Économique</button>
+        <button class="button-filter">Familial</button>
+        <button class="button-filter">Romantique</button>
+        <button class="button-filter">Animaux autorisés</button>
+      </div>
+      <p>Plus de 500 logements sont disponibles dans cette ville</p>
+    </div>
+
+    
+    
+    
 <!--------------------------------------------------------->
 <!--Card destination populaire-->
 <!--------------------------------------------------------->
@@ -87,7 +147,7 @@
 <!--Card hébergement recherché-->
 <!--------------------------------------------------------->
 
-    <div class="container-research">
+    <div id="accomodation-research" class="container-research">
       <div class="container-research-head">
         <h2>Hébergements à Marseille</h2>
       </div>
@@ -213,7 +273,7 @@
 <!--Card activité-->
 <!--------------------------------------------------------->
 
-    <div class="container-activity">
+    <div id="activity-research" class="container-activity">
       <div class="container-activity-head">
         <h2>Activités à Marseille</h2>
       </div>

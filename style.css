@@ -6,15 +6,12 @@
 /*Général*/
 /*------------------------------------------------------------------------*/
 
-@font-face {
-  font-family: 'Raleway';
-  src: url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-}
+
 
 body {
   max-width: 767px;
   margin: auto;
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   background-color: #FFF;
 }
 
@@ -41,6 +38,169 @@ h1,h2,h3 {
 
 p {
   margin: 0px
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+strong {
+  font-weight: bold;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*Header*/
+/*------------------------------------------------------------------------*/
+
+.container-header {
+  max-width: 767px;
+  margin: auto;
+  padding: 30px 25px 30px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-register a{
+  color: #0065FC;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*Nav*/
+/*------------------------------------------------------------------------*/
+
+.container-accommodation-activity {
+  max-width: 767px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;  
+}
+
+.button-accomodation {
+  width: 100%;
+  background-color: #fff;
+  font-size: 16px;
+  color: #0065FC;
+  border: none;
+  border-bottom: 4px solid #0065FC;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.button-activity {
+  width: 100%;
+  background-color: #fff;
+  font-size: 16px;
+  color: #000;
+  border: none;
+  border-bottom: 4px solid #F2F2F2;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*Slogan*/
+/*------------------------------------------------------------------------*/
+
+.catchword {
+  width: 100%;
+  max-width: 767px;
+  margin: auto;
+  padding: 30px 25px;
+}
+
+.catchword h1 {
+  margin-bottom: 10px;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*Champs de recherche*/
+/*------------------------------------------------------------------------*/
+.container-search {
+  display: flex;
+  max-width: 767px;
+  width: 100%;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.localization-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  background-color: #F2F2F2;
+}
+
+.input-search {
+  max-width: 767px;
+  width: 100%;
+  padding: 10px 60px 10px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  border : 2px solid #F2F2F2;
+  }
+
+.search-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  background-color:#0065FC;
+}
+
+.fa-search {
+  color: #FFF;
+}
+
+::placeholder {
+  color: #CBCBCB;
+  font-weight: normal;
+}
+input:focus {
+  outline:  none;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*Filtres*/
+/*------------------------------------------------------------------------*/
+
+.container-filter {
+  max-width: 767px;
+  width: 100%;
+  margin: auto;
+  padding: 25px;
+}
+
+.container-filter h2 {
+  margin-bottom: 10px;
+} 
+.card-filter {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.button-filter {
+  padding: 10px 20px 10px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  border : 3px solid #F2F2F2;
+  background-color: #FFF;
 }
 
 /*------------------------------------------------------------------------*/
@@ -247,7 +407,7 @@ p {
   
   .container-popular {
     border-radius: 30px;
-    max-width: 768px;
+    max-width: 767px;
   }
 
 
@@ -256,7 +416,7 @@ p {
 @media (min-width: 992px) {
 
   body {
-    max-width: 991px;
+    max-width: 1199px;
   }
 
 }
