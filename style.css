@@ -55,7 +55,7 @@ input:focus {
 .screen-XL {
   max-width: 1200px;
   margin: auto;
-  padding: 30px 25px 30px 25px;
+  padding: 40px 25px;
 }
 
 .screen-XL_no-padding {
@@ -90,22 +90,23 @@ input:focus {
 
 .header_menu_btn1 {
   width: 50%;
-  font-size: 16px;
-  color: #0065FC;
   border: none;
   border-bottom: 4px solid #0065FC;
   padding: 20px 5% 20px 5%;
   text-align: center;
+  font-size: 16px;
+  color: #0065FC;
 }
+
 
 .header_menu_btn2 {
   width: 50%;
-  font-size: 16px;
-  color: #000;
   border: none;
   border-bottom: 4px solid #F2F2F2;
   padding: 20px 5% 20px 5%;
   text-align: center;
+  font-size: 16px;
+  color: #000;
 }
 
 /*------------------------------------------------------------------------*/
@@ -157,6 +158,9 @@ input:focus {
   font-size: 18px;
   position: absolute;
   left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main_search_btn2 {
@@ -253,30 +257,34 @@ input:focus {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .fa-chart-line {
   font-size: 22px;
 }
-/*Card*/
+
+/*Rangement card*/
 .featured_storage {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  
 }
 
+/*Card*/
 .featured_storage_card {
   display: flex;
   background-color: #FFF;
   padding: 7px;
   border-radius: 20px;
+  box-shadow: 0px 0px 10px 1px #E6E6E6;
 }
 
 .featured_storage_card_img {
   width: 40%;
   object-fit: cover;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   height: 200px;
 }
 
@@ -284,7 +292,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 15px 20px 15px 25px;
+  padding: 8px 20px 8px 25px;
 }
 
 .featured_storage_card_body_text_title {
@@ -306,15 +314,120 @@ input:focus {
 /*Card hébergement*/
 /*------------------------------------------------------------------------*/
 
+/*Header*/
+.main-content-1_header {
+  padding-bottom: 30px;
+}
 
+.main-content-1_storage {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
+/*Card*/
+.main-content-1_storage_card {
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 1px #E6E6E6;
+}
 
+.main-content-1_storage_card_img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.main-content-1_storage_card_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 20px 8px 20px;
+}
+
+.main-content-1_storage_card_body_text_title{
+  padding-bottom: 10px;
+}
+
+.main-content-1_storage_card_body_stars {
+  padding-top: 15px;
+}
+
+/*Footer*/
+.main-content-1_footer {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 30px;
+}
 
 /*------------------------------------------------------------------------*/
 /*Card activité*/
 /*------------------------------------------------------------------------*/
 
+.main-content-2_header {
+  padding-bottom: 30px;
+}
 
+.main-content-2_storage {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-content-2_storage_card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 1px #E6E6E6;
+  max-height: 300px;
+}
+
+.main-content-2_storage_card_img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+
+.main-content-2_storage_card_body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*Footer*/
+/*------------------------------------------------------------------------*/
+
+.footer {
+  background-color: #F2F2F2;
+}
+
+.footer_storage {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 100px;
+  row-gap: 30px;
+}
+
+.footer_storage_body h3 {
+  padding-bottom: 20px;
+}
+
+.footer_storage_body_links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer_storage_body_links a {
+  color: #000;
+}
 
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
