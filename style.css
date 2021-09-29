@@ -50,6 +50,26 @@ input:focus {
   outline: none;
 }
 
+ul {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  font-size: 16px;
+  list-style-type: none;
+}
+
+li {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  font-size: 16px;
+  list-style-type: none;
+}
+
+
+
+
+
 
 
 /*------------------------------------------------------------------------*/
@@ -71,12 +91,14 @@ input:focus {
 
 .header_register {
   padding: 40px 20px 40px 0px;
-}
-
-.header_register a {
   color: #0065FC;
   font-weight: bold;
 }
+
+    .header_register:active, .header_register:hover {
+      color: #034bb8;
+    }
+  
 
 .header_menu {
   display: flex;
@@ -84,16 +106,10 @@ input:focus {
   width: 100%;
 }
 
-.header_menu_btn1 {
-  width: 50%;
-  border: none;
-  border-bottom: 4px solid #0065FC;
-  color: #0065FC;
-  text-align: center;
-  padding-bottom: 12px;
-}
 
-.header_menu_btn2 {
+
+.menu-btn {
+  position: relative;
   width: 50%;
   border: none;
   border-bottom: 4px solid #F2F2F2;
@@ -101,9 +117,31 @@ input:focus {
   color: #000;
   text-align: center;
   padding-bottom: 12px;
+  transition: color 500ms ease-in-out;
+}
+    /*Effet active (smatphone/tablette) et hover (pc) sur les filtres*/
+    .menu-btn:active, .menu-btn:hover {
+      color: #0065FC;
+      transition: color 250ms ease-in-out;
+    }
+
+/*Border du bouton*/
+.menu-btn:before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-bottom: 4px solid #0065FC;
+  transform: scaleX(0);
+  transition: transform 500ms ease-in-out;
 }
 
-
+    .menu-btn:active:before, .menu-btn:hover:before {
+      transform: scaleX(1);
+      transition: transform 250ms ease-in-out;
+    }
 
 /*------------------------------------------------------------------------*/
 /*Main*/
@@ -147,17 +185,23 @@ input:focus {
   padding: 14.5px 70px;
   border-radius: 15px;
   border : 2px solid #F2F2F2;
+  background-color: #F2F2F2;
   box-sizing: border-box;
+  
 }
 
+.search_input:focus {
+  background-color: #FFF;
+}
 
-:placeholder-shown {
+/*Enlève le style par défaut du texte placeholder*/
+.search_input:placeholder-shown {
   font-weight: normal;
 }
 
 
 
-.search_btn1 {
+.search_icon {
   width: 54px;
   height: 54px;
   border: none;
@@ -173,7 +217,7 @@ input:focus {
 }
 
 /*Bouton rechercher mobile*/
-.search_btn2 {
+.search_btn {
   width: 54px;
   height: 54px;
   border: none;
@@ -185,15 +229,21 @@ input:focus {
   right: 0px;
 }
 
+    /*Effet active*/
+    .search_btn:active {
+      border: 2px solid #0065FC ;
+      background-color: #FFF;
+      color: #0065FC;
+    }
+
 /*Bouton rechercher desktop*/
-.search_btn2-desktop {
+.search_btn-desktop {
   display: none;
 }
 
+
 /*Filtres*/
 /*----------------------------*/
-
-
 
 /*Rangement des filtres*/
 .filter_storage {
@@ -213,35 +263,98 @@ input:focus {
 
 /*Card filtre*/
 .filter_card {
+  /*Hauteur général du bouton filtre*/
+  --height_btn-filtre: 46px;
+
   display: flex;
   align-items: center;
   position: relative;
+  height: var(--height_btn-filtre);
+  padding: 0px 15px 0px 50px;
+  /*Le border radius équivaut à 50% de sa hauteur*/
+  border-radius: calc(var(--height_btn-filtre)/2);
+  border: none;
+  background-color: #FFF;
+  transition: padding 1000ms ease-in-out, color 1000ms ease-in-out;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+  box-sizing: border-box;
 }
+
+    .filter_card:active, .filter_card:hover  {
+      color: #fff;
+      padding: 0px 50px 0px 15px;
+      transition: padding 500ms ease-in-out, color 500ms ease-in-out;  
+    }
+
+.filter_card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-radius: 23px;
+  border : 2px solid #D9D9D9;
+  z-index: -2;
+}
+
+.filter_card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 23px;
+  height: 100%;
+  /*Pour corriger le bug graphique de la superposition des éléments j'utilise opacity*/
+  opacity: 0;
+  background-color: #0065FC;
+  /*Transition plus lente au retour + opacity reste à 100% jusqu'à la fin de l'animation et repasse à 0 d'un coup o*/
+  transition: width 1000ms ease-in-out, opacity 1000ms cubic-bezier(1.0, 0.0, 1.0, 0.0);
+  z-index: -1;
+}
+
+    .filter_card:active::before, .filter_card:hover::before {
+      width: calc(100% - 23px);
+      opacity: 100%;
+      /*Pour corriger le bug graphique de la superposition des éléments on ne met pas l'opacity dans la transition*/
+      transition: width 500ms ease-in-out;
+    }
 
 
 .filter_card_btn {
-  padding: 12px 15px 12px 50px;
   font-size: 16px;
-  font-weight: bold;
-  border-radius: 24px;
-  border : 2px solid #D9D9D9;
-  background-color: #FFF;
+  font-weight: bold; 
 }
 
+
 .filter_card_icon {
+  /*Diamètre donné par la hauteur général du bouton filtre*/
+  --diametre_icon-filter: 46px;
+  width: var(--diametre_icon-filter); 
+  height: var(--diametre_icon-filter); 
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46px; 
-  height: 46px;
-  min-width: 46px; 
   background-color: #DEEBFF;
-  border-radius: 46px;
+  border-radius: 50%;
   font-size: 16px;
   color: #0065FC;
   position: absolute;
-  left: 0px;
+  left: 0;
+  transition: left 1000ms ease-in-out, transform 1000ms ease-in-out;
 }
+
+    /*Effet active/hover sur les filtres*/
+    .filter_card:active .filter_card_icon, .filter_card:hover .filter_card_icon {
+      left: calc(100% - var(--diametre_icon-filter));
+      transform: rotate(1turn);
+      transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+    }
+
+
+
 
 /*Texte et icone information*/
 .filter_info {
@@ -281,6 +394,11 @@ input:focus {
   padding: 35px 20px;
 }
 
+.featured a {
+  color: #000;
+}
+
+
 /*Titre et icone*/
 .featured_header {
   display: flex;
@@ -309,8 +427,12 @@ input:focus {
   border-radius: 20px;
   box-shadow: 0px 0px 10px 1px #E6E6E6;
   height: 150px;
-
 }
+
+    /*Effet active/hover sur la card populaire*/
+    .featured_card:active, .featured_card:hover {
+      box-shadow: 0px 0px 10px 5px #dddddd;
+    }
 
 .featured_card_img {
   width: 40%;
@@ -359,6 +481,10 @@ input:focus {
   padding: 35px 20px;
 }
 
+.research-1 a {
+  color: #000;
+}
+
 /*Header*/
 .research-1_header {
   padding-bottom: 25px;
@@ -379,6 +505,11 @@ input:focus {
   box-shadow: 0px 0px 10px 1px #E6E6E6;
   height: 250px;
 }
+
+    /*Effet active/hover sur la card hébergement*/
+    .research-1_card:active, .research-1_card:hover {
+      box-shadow: 0px 0px 10px 5px #dddddd;
+    }
 
 .research-1_card_img {
   height: 60%;
@@ -410,18 +541,29 @@ input:focus {
 
 
 
-/*Footer*/
-.research-1_footer {
+/*Bouton "Afficher plus"*/
+.research-1_btn {
   font-size: 18px;
   font-weight: bold;
   padding-top: 30px;
+  border: none;
+  background: none;
 }
+
+    /*Effet active/hover*/
+    .research-1_btn:active, .research-1_btn:hover {
+      color: #0065FC;
+    }
 
 /*Card activité*/
 /*------------------------------------------------------------------------*/
 
 .research-2{
   padding: 15px 20px 40px 20px;
+}
+
+.research-2 a {
+  color: #000;
 }
 
 /*Header*/
@@ -443,6 +585,11 @@ input:focus {
   box-shadow: 0px 0px 10px 1px #E6E6E6;
   height: 250px;
 }
+
+    /*Effet active/hover sur la card activité*/
+    .research-2_card:active, .research-2_card:hover {
+      box-shadow: 0px 0px 10px 5px #dddddd;
+    }
 
 .research-2_card_img {
   height: 80%;
@@ -498,6 +645,12 @@ input:focus {
 .footer_card_links a {
   color: #000;
 }
+    
+    /*Effet active/hover sur les liens du footers*/
+    .footer_card_links a:active, .footer_card_links a:hover {
+      text-decoration: underline;
+    }
+
 
 
 
@@ -656,6 +809,7 @@ input:focus {
 
 @media (min-width: 1050px) {
 
+
   /*------------------------------------------------------------------------*/
   /*Header*/
   /*------------------------------------------------------------------------*/
@@ -681,18 +835,17 @@ input:focus {
     width: auto;
   }
 
-  .header_menu_btn1 {
+  .menu-btn {
     width: auto;
     border-bottom: none;
-    border-top: 4px solid #0065FC;
+    border-top: 4px solid #FFF;
     padding: 40px 25px 0px 25px;
   }
 
-  .header_menu_btn2 {
-    width: auto;
-    border: none;
-    border-top: 4px solid #FFF;
-    padding: 40px 25px 0px 25px;
+  .menu-btn:before {
+    top: -4px;
+    border-bottom: none;
+    border-top: 4px solid #0065FC;
   }
 
   /*------------------------------------------------------------------------*/
@@ -708,12 +861,12 @@ input:focus {
   }
 
   /*Bouton rechercher mobile*/
-  .search_btn2 {
+  .search_btn {
     display: none;
   }
 
   /*Bouton rechercher desktop*/
-  .search_btn2-desktop {
+  .search_btn-desktop {
     display: inline;
     height: 54px;
     border: none;
@@ -727,12 +880,29 @@ input:focus {
     color: #FFF;
     position: absolute;
     right: 0px;
+    cursor: pointer;
   }
+
+      /*Effet hover*/
+      .search_btn-desktop:hover {
+        background-color: #034bb8;
+      }
+
+      /*Effet active*/
+      .search_btn-desktop:active {
+        border: 2px solid #0065FC ;
+        background-color: #FFF;
+        color: #0065FC;
+      }
 
   /*Filtres*/
   /*----------------------------*/
   .filter_storage {
     gap: 15px;
+  }
+
+  .filter_card {
+    cursor: pointer;
   }
 
   .filter_title {
@@ -746,13 +916,11 @@ input:focus {
   /*  Destinations populaires + destinations recherché*/
   /*------------------------------------------------------------------------*/
   .global_storage {
-    /*la gap est donnée par cette variable*/
-    --width-gap-featured-research: 35px;
     display: flex;
     flex-direction: row;
     align-items: stretch;
     padding: 0px 40px;
-    gap: var(--width-gap-featured-research);
+    gap: 35px;
   }
 
 
@@ -780,7 +948,8 @@ input:focus {
     width: auto;
     height: 240px;
   }
-
+  
+  
 
   /*Card hébergement*/
   /*------------------------------------------------------------------------*/
@@ -789,7 +958,6 @@ input:focus {
     padding: 35px;
     background-color: #F2F2F2;
     border-radius: 30px;
-    /*la width fait 1/3 de la div moins 1/3 de la largeur de la gap, multipliée par le nombre de gap soit 1*/
     width: 70%;
   }
 
@@ -799,8 +967,10 @@ input:focus {
     gap: var(--width-gap-card-research);
   }
 
- 
-
+  .research-1_btn {
+    cursor: pointer;
+  }
+  
 
   /*------------------------------------------------------------------------*/
   /*Card activité*/
@@ -879,11 +1049,11 @@ input:focus {
 
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
-/*Moyen écran desktop*/
+/*Grand écran desktop*/
 /*------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
 
   
   /*------------------------------------------------------------------------*/
@@ -912,9 +1082,8 @@ input:focus {
 
   /*Card destination populaire*/
   /*------------------------------------------------------------------------*/
-  .featured {    
-    /*la width fait 25% de la div moins 25% de la largeur de la gap, multipliée par le nombre de gap soit 1*/
-    width: calc((25%) - var(--width-gap-featured-research)* 25%);
+  .featured {  
+    width: 25%;
   } 
 
   /*Card*/
@@ -945,8 +1114,7 @@ input:focus {
   /*------------------------------------------------------------------------*/
 
   .research-1 {
-    /*la width fait 75% de la div moins 75% de la largeur de la gap, multipliée par le nombre de gap soit 1 */
-    width: calc((75%) - var(--width-gap-featured-research)* 75%);
+    width: 75%;
   }
  
   .research-1_card {

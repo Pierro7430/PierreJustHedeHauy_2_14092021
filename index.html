@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="user-scalable=no, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Rerservia</title>
     <link href="/css/all.css" rel="stylesheet">
     <link href="css/solid.css" rel="stylesheet" />
@@ -22,14 +22,12 @@
       <div class="header_logo">
         <a href="index.html"><img src="images/logo/Reservia.svg" alt="Logo Reservia" title="Accueil"></a>
       </div>
-
-      <div class="header_register">
-        <a href="#">S'inscrire</a>
-      </div>
-
+      
+      <a href="#" class="header_register">S'inscrire</a>
+      
       <nav class="header_menu">
-        <a href="#anchor-1" class="header_menu_btn1">Hébergements</a>
-        <a href="#anchor-2" class="header_menu_btn2">Activités</a>
+        <a href="#anchor-1" class="menu-btn">Hébergements</a>
+        <a href="#anchor-2" class="menu-btn">Activités</a>
       </nav>
 
     </header>
@@ -60,15 +58,15 @@
         <!---------------------------------->
 
         <div class="search">
-
-          <div class="search_btn1"><i class="fas fa-map-marker-alt"></i></div>
-          <input type="text" class="search_input" placeholder="Où allez-vous ?"/>
+        
+          <label for="localisation" class="search_icon"><i class="fas fa-map-marker-alt"></i></label>
+          <input type="text" class="search_input" placeholder="Où allez-vous ?" id="localisation"/>
 
           <!--Bouton rechercher pour mobile-->
-          <button class="search_btn2"><i class="fas fa-search"></i></button>
+          <button class="search_btn"><i class="fas fa-search"></i></button>
 
           <!--Bouton rechercher pour desktop-->
-          <button class="search_btn2-desktop">Rechercher</button>
+          <button class="search_btn-desktop">Rechercher</button>
 
         </div>
       
@@ -80,24 +78,24 @@
           <div class="filter_storage">
 
             <p class="filter_title">Filtres</p>
-            
+
             <div class="filter_card">            
-              <button class="filter_card_btn">Économique</button>
+              <p class="filter_card_btn">Économique</p>
               <div class="filter_card_icon"><i class="fas fa-money-bill-wave"></i></div>
             </div>
 
-            <div class="filter_card">            
-              <button class="filter_card_btn">Familial</button>
+            <div class="filter_card">             
+              <p class="filter_card_btn">Familial</p>
               <div class="filter_card_icon"><i class="fas fa-child"></i></div>
             </div>
 
-            <div class="filter_card">            
-              <button class="filter_card_btn">Romantique</button>
+            <div class="filter_card">             
+              <p class="filter_card_btn">Romantique</p>
               <div class="filter_card_icon"><i class="fas fa-heart"></i></div>
             </div>
 
-            <div class="filter_card">            
-              <button class="filter_card_btn">Animaux autorisés</button>
+            <div class="filter_card">             
+              <p class="filter_card_btn">Animaux autorisés</p>
               <div class="filter_card_icon"><i class="fas fa-dog"></i></div>
             </div>
 
@@ -138,7 +136,7 @@
           <div class="featured_storage">
 
 
-            <div class="featured_card">
+            <a href="#" class="featured_card" title="Hôtel Le soleil du matin">
 
               <div class="featured_card_img">
                 <img class="img_featured" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin" title="Hôtel Le soleil du matin">
@@ -161,10 +159,10 @@
 
               </div>
 
-            </div>
+            </a>
       
           
-            <div class="featured_card">
+            <a href="#" class="featured_card" title="Au coeur de l'eau Chambres d'hôtes">
 
               <div class="featured_card_img">
                 <img class="img_featured" src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Au coeur de l'eau Chambres d'hôtes" title="Au coeur de l'eau Chambres d'hôtes">
@@ -187,11 +185,10 @@
 
               </div>
 
-            </div>
+            </a>
           
-            
-            
-            <div class="featured_card">
+          
+            <a href="#" class="featured_card" title="Hôtel Tout bleu et Blanc">
 
               <div class="featured_card_img">
 
@@ -215,7 +212,7 @@
 
               </div>
 
-            </div>
+            </a>
           
 
           </div>
@@ -236,7 +233,8 @@
           <div class="research-1_storage">
             
 
-            <div class="research-1_card">
+            <a href="#" class="research-1_card" title="Auberge de la Cannebière">
+
 
               <div class="research-1_card_img">
                 <img class="img_research-1" src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge de la Cannebière" title="Auberge de la Cannebière">
@@ -259,10 +257,11 @@
 
               </div>
 
-            </div>
+            </a>
 
 
-            <div class="research-1_card">
+            <a href="#" class="research-1_card" title="Hôtel du port">
+
             
               <div class="research-1_card_img">
                 <img class="img_research-1" src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hôtel du port" title="Hôtel du port">
@@ -285,10 +284,11 @@
 
               </div>
 
-            </div>
+            </a>
 
 
-            <div class="research-1_card">
+            <a href="#" class="research-1_card" title="Hôtel Les mouettes">
+
             
               <div class="research-1_card_img">
                 <img class="img_research-1" src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel Les mouettes" title="Hôtel Les mouettes">
@@ -311,10 +311,11 @@
 
               </div>
 
-            </div>
+            </a>
             
 
-            <div class="research-1_card">
+            <a href="#" class="research-1_card" title="Hôtel de la mer">
+
             
               <div class="research-1_card_img">
                 <img class="img_research-1" src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hôtel de la mer" title="Hôtel de la mer">
@@ -337,10 +338,11 @@
 
               </div>
 
-            </div>
+            </a>
 
         
-            <div class="research-1_card">
+            <a href="#" class="research-1_card" title="Auberge Le Panier">
+
             
               <div class="research-1_card_img">
                 <img class="img_research-1" src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge Le Panier" title="Auberge Le Panier">
@@ -363,10 +365,11 @@
 
               </div>
 
-            </div>
+            </a>
 
 
-            <div class="research-1_card">
+            <a href="#" class="research-1_card" title="Hôtel chez Amina">
+
             
               <div class="research-1_card_img">
                 <img class="img_research-1" src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hôtel chez Amina" title="Hôtel chez Amina">
@@ -389,11 +392,11 @@
 
               </div>
 
-            </div>
+            </a>
             
           </div>
           
-          <p class="research-1_footer">Afficher plus</p>
+          <button class="research-1_btn">Afficher plus</button>
           
         </section>
 
@@ -415,7 +418,7 @@
         <div class="research-2_storage">
 
 
-          <div class="research-2_card activity1">
+          <a href="#" class="research-2_card activity1" title="Le Vieux Port">
 
             <div class="research-2_card_img">
               <img class="img_research-2" src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port de Marseille" title="Le Vieux Port">
@@ -425,10 +428,10 @@
               <h3>Vieux Port</h3>
             </div>
 
-          </div>
+          </a>
         
 
-          <div class="research-2_card activity2">
+          <a href="#" class="research-2_card activity2" title="Le Fort de Pomègues">
 
             <div class="research-2_card_img">
               <img class="img_research-2" src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" title="Le Fort de Pomègues">
@@ -438,10 +441,10 @@
                 <h3>Fort de Pomègues</h3>
             </div>
 
-          </div>
+          </a>
         
 
-          <div class="research-2_card activity3">
+          <a href="#" class="research-2_card activity3" title="Les Îles du Frioul">
 
             <div class="research-2_card_img">
               <img class="img_research-2" src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul" title="Les Îles du Frioul">
@@ -451,10 +454,10 @@
                 <h3>Îles du Frioul</h3>
             </div>
 
-          </div>
+          </a>
         
 
-          <div class="research-2_card activity4">
+          <a href="#" class="research-2_card activity4" title="Le Parc National des Calanques">
 
             <div class="research-2_card_img">
               <img class="img_research-2" src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" title="Le Parc National des Calanques">
@@ -464,9 +467,9 @@
                 <h3>Parc National des Calanques</h3>
             </div>
 
-          </div>
+          </a>
       
-          <div class="research-2_card activity5">
+          <a href="#" class="research-2_card activity5" title="L'église Notre-Dame-de-la-Garde">
 
             <div class="research-2_card_img">
               <img class="img_research-2" src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde" title="L'église Notre-Dame-de-la-Garde">
@@ -476,10 +479,10 @@
                 <h3>Notre-Dame-de-la-Garde</h3>
             </div>
 
-          </div>
+          </a>
         
 
-          <div class="research-2_card activity6">
+          <a href="#" class="research-2_card activity6" title="Le Parc Longchamps">
 
             <div class="research-2_card_img">
               <img class="img_research-2" src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamps" title="Le Parc Longchamps">
@@ -489,7 +492,7 @@
                 <h3>Parc Longchamps</h3>
             </div>
 
-          </div>
+          </a>
 
 
         </div>
@@ -512,27 +515,27 @@
 
         <div class="footer_card">
           <h3>A propos</h3>
-          <div class="footer_card_links">
-            <a href="#">Fontionnement du site</a>
-            <a href="#">Conditions générales de vente</a>
-            <a href="#">Données et confidentialité</a>
-          </div>
+          <ul class="footer_card_links">
+            <li><a href="#">Fontionnement du site</a></li>
+            <li><a href="#">Conditions générales de vente</a></li>
+            <li><a href="#">Données et confidentialité</a></li>
+          </ul>
         </div>
 
         <div class="footer_card">
           <h3>Nos hébergement</h3>
-          <div class="footer_card_links">
-            <a href="#">Charte qualité</a>
-            <a href="#">Soumettre votre hôtels</a>
-          </div>
+          <ul class="footer_card_links">
+            <li><a href="#">Charte qualité</a></li>
+            <li><a href="#">Soumettre votre hôtels</a></li>
+          </ul>
         </div>
 
         <div class="footer_card">
           <h3>Assistance</h3>
-          <div class="footer_card_links">
-            <a href="#">Centre d'aide</a>
-            <a href="#">Nous contacter</a>
-          </div>       
+          <ul class="footer_card_links">
+            <li><a href="#">Centre d'aide</a></li>
+            <li><a href="#">Nous contacter</a></li>
+          </ul>       
         </div>
 
       </div>
