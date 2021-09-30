@@ -11,28 +11,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@420;700&display=swap');
 
-.body {
+body {
   font-family: 'Raleway', sans-serif;
   margin: auto;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 24px;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 22px;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 h1,h2,h3,p {
@@ -42,7 +39,7 @@ h1,h2,h3,p {
 
 a {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 strong {
@@ -57,7 +54,7 @@ ul {
   padding: 0px;
   margin: 0px;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 16px;
   list-style-type: none;
 }
 
@@ -65,9 +62,14 @@ li {
   padding: 0px;
   margin: 0px;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 16px;
   list-style-type: none;
 }
+
+
+
+
+
 
 
 /*------------------------------------------------------------------------*/
@@ -93,29 +95,31 @@ li {
   font-weight: bold;
 }
 
-    /*Effet active (smatphone/tablette) et hover (pc)*/
     .header_register:active, .header_register:hover {
       color: #034bb8;
     }
   
+
 .header_menu {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
+
+
 .menu-btn {
   position: relative;
   width: 50%;
   border: none;
   border-bottom: 4px solid #F2F2F2;
-  font-size: 1.6rem;
+  font-size: 16px;
   color: #000;
   text-align: center;
   padding-bottom: 12px;
   transition: color 500ms ease-in-out;
 }
-    /*Effet active (smatphone/tablette) et hover (pc)*/
+    /*Effet active (smatphone/tablette) et hover (pc) sur les filtres*/
     .menu-btn:active, .menu-btn:hover {
       color: #0065FC;
       transition: color 250ms ease-in-out;
@@ -146,9 +150,7 @@ li {
 .main {
   max-width: 1800px;
   margin: auto;
-  flex: 1;
 }
-
 
 /*------------------------------------------------------------------------*/
 /*Premiere page/recherche*/
@@ -175,9 +177,10 @@ li {
   position: relative;
 }
 
+
 .search_input {
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: bold;
   padding: 14.5px 70px;
   border-radius: 15px;
@@ -196,6 +199,8 @@ li {
   font-weight: normal;
 }
 
+
+
 .search_icon {
   width: 54px;
   height: 54px;
@@ -203,7 +208,7 @@ li {
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   background-color: #F2F2F2;
-  font-size: 1.8rem;
+  font-size: 18px;
   position: absolute;
   left: 0px;
   display: flex;
@@ -218,7 +223,7 @@ li {
   border: none;
   border-radius: 15px;
   background-color:#0065FC;
-  font-size: 1.8rem;
+  font-size: 18px;
   color: #FFF;
   position: absolute;
   right: 0px;
@@ -252,7 +257,7 @@ li {
 /*Titre de la catégorie*/
 .filter_title {
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -260,6 +265,7 @@ li {
 .filter_card {
   /*Hauteur général du bouton filtre*/
   --height_btn-filtre: 46px;
+
   display: flex;
   align-items: center;
   position: relative;
@@ -276,14 +282,12 @@ li {
   box-sizing: border-box;
 }
 
-    /*Effet active (smatphone/tablette) et hover (pc)*/
     .filter_card:active, .filter_card:hover  {
       color: #fff;
       padding: 0px 50px 0px 15px;
       transition: padding 500ms ease-in-out, color 500ms ease-in-out;  
     }
 
-/*bordure du filtre*/
 .filter_card::after {
   content: '';
   position: absolute;
@@ -296,7 +300,6 @@ li {
   z-index: -2;
 }
 
-/*background du filtre qui change*/
 .filter_card::before {
   content: '';
   position: absolute;
@@ -312,7 +315,6 @@ li {
   z-index: -1;
 }
 
-    /*Effet active (smatphone/tablette) et hover (pc)*/
     .filter_card:active::before, .filter_card:hover::before {
       width: calc(100% - 23px);
       opacity: 100%;
@@ -320,12 +322,13 @@ li {
       transition: width 500ms ease-in-out;
     }
 
+
 .filter_card_btn {
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: bold; 
 }
 
-/*Icone ronde des filtres*/
+
 .filter_card_icon {
   /*Diamètre donné par la hauteur général du bouton filtre*/
   --diametre_icon-filter: 46px;
@@ -336,7 +339,7 @@ li {
   align-items: center;
   background-color: #DEEBFF;
   border-radius: 50%;
-  font-size: 1.6rem;
+  font-size: 16px;
   color: #0065FC;
   position: absolute;
   left: 0;
@@ -350,11 +353,15 @@ li {
       transition: left 500ms ease-in-out, transform 500ms ease-in-out;
     }
 
+
+
+
 /*Texte et icone information*/
 .filter_info {
   display: flex;
   align-items: baseline;
   gap: 10px;
+  
 }
 
 .filter_info_circle {
@@ -366,10 +373,9 @@ li {
   min-width: 22px; 
   border: 1px solid #D9D9D9;
   border-radius: 22px;
-  font-size: 1.2rem;
+  font-size: 12px;
   color: #0065FC;
 }
-
 
 /*------------------------------------------------------------------------*/
 /*Destinations populaires + destinations recherchés*/
@@ -392,6 +398,7 @@ li {
   color: #000;
 }
 
+
 /*Titre et icone*/
 .featured_header {
   display: flex;
@@ -401,7 +408,7 @@ li {
 }
 
 .fa-chart-line {
-  font-size: 2.2rem;
+  font-size: 22px;
 }
 
 /*Rangement card*/
@@ -445,6 +452,7 @@ li {
   justify-content: space-between;
   padding: 5px 20px 5px 20px;
   width: 60%;
+
 }
 
 .featured_text h3 {
@@ -458,12 +466,12 @@ li {
 
 .star_blue {
   color: #0065FC;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 .star_grey {
   color: #F2F2F2;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 /*Card hébergement*/
@@ -471,6 +479,10 @@ li {
 
 .research-1 {
   padding: 35px 20px;
+}
+
+.research-1 a {
+  color: #000;
 }
 
 /*Header*/
@@ -527,9 +539,11 @@ li {
   padding-bottom: 8px; 
 }
 
+
+
 /*Bouton "Afficher plus"*/
 .research-1_btn {
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: bold;
   padding-top: 30px;
   border: none;
@@ -546,6 +560,10 @@ li {
 
 .research-2{
   padding: 15px 20px 40px 20px;
+}
+
+.research-2 a {
+  color: #000;
 }
 
 /*Header*/
@@ -611,6 +629,7 @@ li {
   row-gap: 35px;
   padding: 40px 20px;
   box-sizing: border-box;
+  
 }
 
 .footer_card h3 {
@@ -649,11 +668,11 @@ li {
   /*Footer*/
   /*------------------------------------------------------------------------*/
   
-  /*Permet de mieux placer les colonnes du footer*/
   .footer_storage {
     column-gap: 40px;
     justify-content: center;
   }
+
 
 }
 
@@ -696,6 +715,7 @@ li {
     height: auto;
   }
 
+
   .featured_card_img {
     width: 100%;
     height: 120px;
@@ -712,7 +732,6 @@ li {
     height: 100%;
     box-sizing: border-box;   
   }
-
 
   /*Card hébergement*/
   /*------------------------------------------------------------------------*/
@@ -773,7 +792,9 @@ li {
     justify-content:  flex-start;
   }
 
+
 }
+
 
 
 
@@ -803,7 +824,6 @@ li {
     padding: 40px 0px 0px 40px;
   }
 
-  /*On change l'ordre pour avoir le menu avant le bouton s'inscrire*/
   .header_register {
     order: 3;
     padding: 0px;
@@ -855,7 +875,7 @@ li {
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     background-color:#0065FC;
-    font-size: 1.8rem;
+    font-size: 18px;
     padding: 0px 20px 0px 20px;
     color: #FFF;
     position: absolute;
@@ -877,7 +897,6 @@ li {
 
   /*Filtres*/
   /*----------------------------*/
-
   .filter_storage {
     gap: 15px;
   }
@@ -892,10 +911,10 @@ li {
   }
 
 
+
   /*------------------------------------------------------------------------*/
   /*  Destinations populaires + destinations recherché*/
   /*------------------------------------------------------------------------*/
-
   .global_storage {
     display: flex;
     flex-direction: row;
@@ -907,7 +926,6 @@ li {
 
   /*Card destination populaire*/
   /*------------------------------------------------------------------------*/
-
   .featured {
     order: 2;
     padding: 35px;
@@ -917,9 +935,10 @@ li {
     flex-direction: column;
   }
   
+
   .featured_storage {
     flex-direction: column;
-    /*flex grow permet d'utiliser tout la place disponible*/
+    /*Comme dit plus haut, le flex à 1 permet d'utiliser tout l'espace du container*/
     flex: 1;
     gap: 30px;
   }
@@ -961,7 +980,6 @@ li {
     padding: 60px 40px 60px 40px;    
   }
 
-  /*Pour des raisons d'apprentissage, on passe la section en grid ou lieu de flex*/
   .research-2_storage {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -973,8 +991,7 @@ li {
     height: auto;
     width: auto;
   }
-  
-  /*L'overflow permet ici de controler la taille des images et donc des cards*/
+    
   .research-2_card_img {
     height: 100%;
     overflow: hidden;
@@ -1024,9 +1041,8 @@ li {
     column-gap: 150px;
   }
 
+
 }
-
-
 
 
 
@@ -1066,7 +1082,6 @@ li {
 
   /*Card destination populaire*/
   /*------------------------------------------------------------------------*/
-
   .featured {  
     width: 25%;
   } 
@@ -1092,8 +1107,8 @@ li {
   .featured_card_body {
     padding: 5px 20px 5px 20px;
     width: 60%; 
+    
   }
-
 
   /*Card hébergement*/
   /*------------------------------------------------------------------------*/
@@ -1108,6 +1123,7 @@ li {
   }
   
   
+
   /*Card activité*/
   /*------------------------------------------------------------------------*/
   
