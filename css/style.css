@@ -1,6 +1,365 @@
 /*-----------------------------------------------------------------------------------------------*/
-                                      /*MOBILE FIRST*/
+                                      /*MORMALIZE CSS*/
 /*-----------------------------------------------------------------------------------------------*/
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+                                      /*MOBILE*/
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
 
 /*------------------------------------------------------------------------*/
 /*Général*/
@@ -9,27 +368,30 @@
 /*Typo*/
 /*----------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@420;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap');
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway';
   margin: auto;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 p {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 h1,h2,h3,p {
@@ -39,7 +401,7 @@ h1,h2,h3,p {
 
 a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 strong {
@@ -54,7 +416,7 @@ ul {
   padding: 0px;
   margin: 0px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   list-style-type: none;
 }
 
@@ -62,11 +424,9 @@ li {
   padding: 0px;
   margin: 0px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   list-style-type: none;
 }
-
-
 
 
 
@@ -76,11 +436,12 @@ li {
 /*Header*/
 /*------------------------------------------------------------------------*/
 
-.header {
+header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin: auto;
+  width: 100%;
   max-width: 1800px;
 }
 
@@ -95,31 +456,38 @@ li {
   font-weight: bold;
 }
 
+    /*Effet active (smatphone/tablette) et hover (pc)*/
     .header_register:active, .header_register:hover {
       color: #034bb8;
     }
   
-
 .header_menu {
-  display: flex;
-  justify-content: center;
   width: 100%;
 }
 
+.header_menu ul {
+  display: flex;  
+}
 
+.header_menu li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 .menu-btn {
   position: relative;
-  width: 50%;
+  width: 100%;
   border: none;
   border-bottom: 4px solid #F2F2F2;
-  font-size: 16px;
+  font-size: 1rem;
   color: #000;
   text-align: center;
   padding-bottom: 12px;
   transition: color 500ms ease-in-out;
 }
-    /*Effet active (smatphone/tablette) et hover (pc) sur les filtres*/
+
+    /*Effet active (smatphone/tablette) et hover (pc)*/
     .menu-btn:active, .menu-btn:hover {
       color: #0065FC;
       transition: color 250ms ease-in-out;
@@ -143,14 +511,17 @@ li {
       transition: transform 250ms ease-in-out;
     }
 
+
 /*------------------------------------------------------------------------*/
 /*Main*/
 /*------------------------------------------------------------------------*/
 
-.main {
+main {
   max-width: 1800px;
   margin: auto;
+  flex: 1;
 }
+
 
 /*------------------------------------------------------------------------*/
 /*Premiere page/recherche*/
@@ -160,12 +531,14 @@ li {
   padding: 30px 20px 35px 20px;
 }
 
+
 /*Slogan*/
 /*----------------------------*/
 
 .catchword h1 {
   padding-bottom: 12px;
 }
+
 
 /*Champs de recherche*/
 /*----------------------------*/
@@ -177,17 +550,15 @@ li {
   position: relative;
 }
 
-
 .search_input {
   width: 100%;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   padding: 14.5px 70px;
   border-radius: 15px;
   border : 2px solid #F2F2F2;
   background-color: #F2F2F2;
   box-sizing: border-box;
-  
 }
 
 .search_input:focus {
@@ -199,8 +570,6 @@ li {
   font-weight: normal;
 }
 
-
-
 .search_icon {
   width: 54px;
   height: 54px;
@@ -208,7 +577,7 @@ li {
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   background-color: #F2F2F2;
-  font-size: 18px;
+  font-size: 1.125rem;
   position: absolute;
   left: 0px;
   display: flex;
@@ -223,7 +592,7 @@ li {
   border: none;
   border-radius: 15px;
   background-color:#0065FC;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #FFF;
   position: absolute;
   right: 0px;
@@ -257,7 +626,7 @@ li {
 /*Titre de la catégorie*/
 .filter_title {
   width: 100%;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
 }
 
@@ -265,7 +634,6 @@ li {
 .filter_card {
   /*Hauteur général du bouton filtre*/
   --height_btn-filtre: 46px;
-
   display: flex;
   align-items: center;
   position: relative;
@@ -282,12 +650,14 @@ li {
   box-sizing: border-box;
 }
 
+    /*Effet active (smatphone/tablette) et hover (pc)*/
     .filter_card:active, .filter_card:hover  {
       color: #fff;
       padding: 0px 50px 0px 15px;
       transition: padding 500ms ease-in-out, color 500ms ease-in-out;  
     }
 
+/*bordure du filtre*/
 .filter_card::after {
   content: '';
   position: absolute;
@@ -300,6 +670,7 @@ li {
   z-index: -2;
 }
 
+/*background du filtre qui change*/
 .filter_card::before {
   content: '';
   position: absolute;
@@ -307,7 +678,7 @@ li {
   left: 0;
   width: 23px;
   height: 100%;
-  /*Pour corriger le bug graphique de la superposition des éléments j'utilise opacity*/
+  /*Pour corriger le bug graphique de la superposition des éléments, j'utilise opacity*/
   opacity: 0;
   background-color: #0065FC;
   /*Transition plus lente au retour + opacity reste à 100% jusqu'à la fin de l'animation et repasse à 0 d'un coup o*/
@@ -315,6 +686,7 @@ li {
   z-index: -1;
 }
 
+    /*Effet active (smatphone/tablette) et hover (pc)*/
     .filter_card:active::before, .filter_card:hover::before {
       width: calc(100% - 23px);
       opacity: 100%;
@@ -322,13 +694,12 @@ li {
       transition: width 500ms ease-in-out;
     }
 
-
 .filter_card_btn {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold; 
 }
 
-
+/*Icone ronde des filtres*/
 .filter_card_icon {
   /*Diamètre donné par la hauteur général du bouton filtre*/
   --diametre_icon-filter: 46px;
@@ -339,29 +710,25 @@ li {
   align-items: center;
   background-color: #DEEBFF;
   border-radius: 50%;
-  font-size: 16px;
+  font-size: 1rem;
   color: #0065FC;
   position: absolute;
   left: 0;
   transition: left 1000ms ease-in-out, transform 1000ms ease-in-out;
 }
 
-    /*Effet active/hover sur les filtres*/
+    /*Effet active (smatphone/tablette) et hover (pc)*/
     .filter_card:active .filter_card_icon, .filter_card:hover .filter_card_icon {
       left: calc(100% - var(--diametre_icon-filter));
       transform: rotate(1turn);
       transition: left 500ms ease-in-out, transform 500ms ease-in-out;
     }
 
-
-
-
 /*Texte et icone information*/
 .filter_info {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  
 }
 
 .filter_info_circle {
@@ -373,9 +740,10 @@ li {
   min-width: 22px; 
   border: 1px solid #D9D9D9;
   border-radius: 22px;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #0065FC;
 }
+
 
 /*------------------------------------------------------------------------*/
 /*Destinations populaires + destinations recherchés*/
@@ -385,6 +753,7 @@ li {
   display: flex;
   flex-direction: column;
 }
+
 
 /*Card destination populaire*/
 /*------------------------------------------------------------------------*/
@@ -398,7 +767,6 @@ li {
   color: #000;
 }
 
-
 /*Titre et icone*/
 .featured_header {
   display: flex;
@@ -408,7 +776,7 @@ li {
 }
 
 .fa-chart-line {
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 /*Rangement card*/
@@ -429,7 +797,7 @@ li {
   height: 150px;
 }
 
-    /*Effet active/hover sur la card populaire*/
+    /*Effet active (smatphone/tablette) et hover (pc)*/
     .featured_card:active, .featured_card:hover {
       box-shadow: 0px 0px 10px 5px #dddddd;
     }
@@ -452,13 +820,11 @@ li {
   justify-content: space-between;
   padding: 5px 20px 5px 20px;
   width: 60%;
-
 }
 
 .featured_text h3 {
   padding-bottom: 8px;
 }
-
 
 .featured_stars {
   padding-top: 10px;
@@ -466,13 +832,14 @@ li {
 
 .star_blue {
   color: #0065FC;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .star_grey {
   color: #F2F2F2;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
+
 
 /*Card hébergement*/
 /*------------------------------------------------------------------------*/
@@ -506,7 +873,7 @@ li {
   height: 250px;
 }
 
-    /*Effet active/hover sur la card hébergement*/
+    /*Effet active (smatphone/tablette) et hover (pc)*/
     .research-1_card:active, .research-1_card:hover {
       box-shadow: 0px 0px 10px 5px #dddddd;
     }
@@ -539,21 +906,20 @@ li {
   padding-bottom: 8px; 
 }
 
-
-
 /*Bouton "Afficher plus"*/
 .research-1_btn {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   padding-top: 30px;
   border: none;
   background: none;
 }
 
-    /*Effet active/hover*/
+    /*Effet active (smatphone/tablette) et hover (pc)*/
     .research-1_btn:active, .research-1_btn:hover {
       color: #0065FC;
     }
+
 
 /*Card activité*/
 /*------------------------------------------------------------------------*/
@@ -586,7 +952,7 @@ li {
   height: 250px;
 }
 
-    /*Effet active/hover sur la card activité*/
+    /*Effet active (smatphone/tablette) et hover (pc)*/
     .research-2_card:active, .research-2_card:hover {
       box-shadow: 0px 0px 10px 5px #dddddd;
     }
@@ -603,7 +969,6 @@ li {
   border-top-right-radius: 15px;
 }
 
-
 .research-2_card_body {
   display: flex;
   flex-direction: column;
@@ -612,11 +977,12 @@ li {
   padding: 0px 15px;
 }
 
+
 /*------------------------------------------------------------------------*/
 /*Footer*/
 /*------------------------------------------------------------------------*/
 
-.footer {
+footer {
   background-color: #F2F2F2;
 }
 
@@ -629,7 +995,6 @@ li {
   row-gap: 35px;
   padding: 40px 20px;
   box-sizing: border-box;
-  
 }
 
 .footer_card h3 {
@@ -646,7 +1011,7 @@ li {
   color: #000;
 }
     
-    /*Effet active/hover sur les liens du footers*/
+    /*Effet active (smatphone/tablette) et hover (pc) sur les liens*/
     .footer_card_links a:active, .footer_card_links a:hover {
       text-decoration: underline;
     }
@@ -655,24 +1020,25 @@ li {
 
 
 
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
-/*Grand smartphone*/
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+                                      /*GRAND SMARTPHONE*/
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
 
 
 @media (min-width: 500px) {
 
- /*------------------------------------------------------------------------*/
+
+  /*------------------------------------------------------------------------*/
   /*Footer*/
   /*------------------------------------------------------------------------*/
   
+  /*Permet de mieux placer les colonnes du footer*/
   .footer_storage {
     column-gap: 40px;
     justify-content: center;
   }
-
 
 }
 
@@ -680,21 +1046,21 @@ li {
 
 
 
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
-/*Tablette*/
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+                                      /*TABLETTE*/
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
 
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
+
 
   /*------------------------------------------------------------------------*/
   /*Destinations populaires + destinations recherchés*/
   /*------------------------------------------------------------------------*/
 
   
-
   /*Card destination populaire*/
   /*------------------------------------------------------------------------*/
   
@@ -715,7 +1081,6 @@ li {
     height: auto;
   }
 
-
   .featured_card_img {
     width: 100%;
     height: 120px;
@@ -732,6 +1097,7 @@ li {
     height: 100%;
     box-sizing: border-box;   
   }
+
 
   /*Card hébergement*/
   /*------------------------------------------------------------------------*/
@@ -792,29 +1158,27 @@ li {
     justify-content:  flex-start;
   }
 
-
 }
 
 
 
 
 
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+                                      /*PETIT ÉCRAN DESKTOP*/
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
 
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
-/*Petit écran desktop*/
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
 
-
-@media (min-width: 1050px) {
+@media (min-width: 1024px) {
 
 
   /*------------------------------------------------------------------------*/
   /*Header*/
   /*------------------------------------------------------------------------*/
 
-  .header {
+  header {
     flex-wrap: nowrap;
     align-items: flex-start;
     margin: auto;
@@ -824,6 +1188,7 @@ li {
     padding: 40px 0px 0px 40px;
   }
 
+  /*On change l'ordre pour avoir le menu avant le bouton s'inscrire*/
   .header_register {
     order: 3;
     padding: 0px;
@@ -847,6 +1212,7 @@ li {
     border-bottom: none;
     border-top: 4px solid #0065FC;
   }
+
 
   /*------------------------------------------------------------------------*/
   /*Premiere page/recherche*/
@@ -875,7 +1241,7 @@ li {
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     background-color:#0065FC;
-    font-size: 18px;
+    font-size: 1.125rem;
     padding: 0px 20px 0px 20px;
     color: #FFF;
     position: absolute;
@@ -883,20 +1249,22 @@ li {
     cursor: pointer;
   }
 
-      /*Effet hover*/
+      /*Effet hover (PC)*/
       .search_btn-desktop:hover {
         background-color: #034bb8;
       }
 
-      /*Effet active*/
+      /*Effet active (Mobile)*/
       .search_btn-desktop:active {
         border: 2px solid #0065FC ;
         background-color: #FFF;
         color: #0065FC;
       }
 
+
   /*Filtres*/
   /*----------------------------*/
+
   .filter_storage {
     gap: 15px;
   }
@@ -911,10 +1279,10 @@ li {
   }
 
 
-
   /*------------------------------------------------------------------------*/
   /*  Destinations populaires + destinations recherché*/
   /*------------------------------------------------------------------------*/
+
   .global_storage {
     display: flex;
     flex-direction: row;
@@ -926,6 +1294,7 @@ li {
 
   /*Card destination populaire*/
   /*------------------------------------------------------------------------*/
+
   .featured {
     order: 2;
     padding: 35px;
@@ -935,7 +1304,6 @@ li {
     flex-direction: column;
   }
   
-
   .featured_storage {
     flex-direction: column;
     /*Comme dit plus haut, le flex à 1 permet d'utiliser tout l'espace du container*/
@@ -950,7 +1318,6 @@ li {
   }
   
   
-
   /*Card hébergement*/
   /*------------------------------------------------------------------------*/
 
@@ -980,6 +1347,7 @@ li {
     padding: 60px 40px 60px 40px;    
   }
 
+  /*Pour des raisons d'apprentissage, on passe la section en grid ou lieu de flex*/
   .research-2_storage {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -992,6 +1360,7 @@ li {
     width: auto;
   }
     
+  /*L'overflow permet ici de controler la taille des images et donc des cards*/
   .research-2_card_img {
     height: 100%;
     overflow: hidden;
@@ -1041,17 +1410,18 @@ li {
     column-gap: 150px;
   }
 
-
 }
 
 
 
 
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
-/*Grand écran desktop*/
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+                                      /*GRAND ÉCRAN DESKTOP*/
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
 
 @media (min-width: 1250px) {
 
@@ -1060,11 +1430,10 @@ li {
   /*Header*/
   /*------------------------------------------------------------------------*/
 
+
   /*------------------------------------------------------------------------*/
   /*Premiere page/recherche*/
   /*------------------------------------------------------------------------*/
-
-
 
 
   /*Filtres*/
@@ -1072,7 +1441,6 @@ li {
   .filter_storage {
     gap: 25px;
   }
-
 
 
   /*------------------------------------------------------------------------*/
@@ -1107,8 +1475,8 @@ li {
   .featured_card_body {
     padding: 5px 20px 5px 20px;
     width: 60%; 
-    
   }
+
 
   /*Card hébergement*/
   /*------------------------------------------------------------------------*/
@@ -1121,7 +1489,6 @@ li {
     /*la width fait 1/3 de la div moins moins 1/3 de la largeur de la gap, multipliée par le nombre de gap soit 2 */
     width: calc((100% / 3) - var(--width-gap-card-research)* (2 / 3));
   }
-  
   
 
   /*Card activité*/
@@ -1160,6 +1527,7 @@ li {
     grid-area: 5 / 4 / 9 / 5;
   }
   
+
   /*------------------------------------------------------------------------*/
   /*Footer*/
   /*------------------------------------------------------------------------*/
